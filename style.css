@@ -1,0 +1,137 @@
+/* Base styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #dfe9f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#gameContainer {
+  position: relative;
+  width: 480px;
+  height: 640px;
+}
+
+#gameCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Heads-up display */
+.hud {
+  position: absolute;
+  color: #ffffff;
+  font-size: 24px;
+  top: 10px;
+  left: 10px;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  user-select: none;
+}
+
+#timerBar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 150px;
+  height: 14px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+}
+
+#timerFill {
+  width: 100%;
+  height: 100%;
+  background: #f47a30;
+  border-radius: 6px;
+  transition: width 0.1s linear;
+}
+
+/* Controls */
+#controls {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  pointer-events: auto;
+}
+
+#controls button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  background: #655f58;
+  box-shadow: inset 0 4px 0 rgba(0, 0, 0, 0.3), 0 4px 6px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  font-size: 32px;
+  line-height: 32px;
+  cursor: pointer;
+  user-select: none;
+}
+
+#controls button:active {
+  transform: translateY(2px);
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Game over overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay .panel {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 30px 40px;
+  text-align: center;
+}
+
+.overlay .panel h1 {
+  margin-top: 0;
+  font-size: 32px;
+  color: #2f6f99;
+}
+
+.overlay .panel p {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.overlay .panel button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background: #2f6f99;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.overlay .panel button:hover {
+  background: #245a7e;
+}
