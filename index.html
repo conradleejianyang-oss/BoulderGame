@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Climber Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- place PNGs in same folder as index.html -->
+    <div id="gameContainer">
+      <canvas id="gameCanvas" width="480" height="640"></canvas>
+      <div id="score" class="hud">0</div>
+      <div id="timerBar">
+        <div id="timerFill"></div>
+      </div>
+      <div id="controls">
+        <button id="leftBtn" aria-label="Move Left">&#x2190;</button>
+        <button id="rightBtn" aria-label="Move Right">&#x2192;</button>
+      </div>
+      <div id="gameOver" class="overlay hidden">
+        <div class="panel">
+          <h1>Game Over</h1>
+          <p>Your Score: <span id="finalScore">0</span></p>
+          <button id="restartBtn">Restart</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
